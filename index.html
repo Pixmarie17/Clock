@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container card">
+    <div id="clock-section" class="section active">
+      <h1>Digital Clock</h1>
+      <div id="clock">00:00:00 AM</div>
+      <div class="buttons">
+        <button onclick="showSection('timer')">Timer</button>
+        <button onclick="showSection('stopwatch')">⏱Stopwatch</button>
+      </div>
+    </div>
+
+    <div id="timer-section" class="section">
+      <h1>Timer</h1>
+      <input type="number" id="minutes" placeholder="Minutes" min="0">
+      <input type="number" id="seconds" placeholder="Seconds" min="0" max="59"><br>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <div id="timer">00:00</div>
+      <button onclick="showSection('clock')">Back</button>
+    </div>
+
+    <div id="stopwatch-section" class="section">
+      <h1>⏱Stopwatch</h1>
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <div id="stopwatch">00:00:00</div>
+      <button onclick="showSection('clock')">Back</button>
+    </div>
+  </div>
+
+  <audio id="alarm" src="alarm.mp3" preload="auto"></audio>
+  <audio id="click" src="click.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
