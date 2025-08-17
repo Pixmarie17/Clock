@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background-color: #1e1e2f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 2rem;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  margin: 1.5rem 0 0.5rem;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+#clock, #timer, #stopwatch {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: #76ff03;
+  text-shadow: 0 0 5px #76ff03;
+}
+
+.buttons, .section button {
+  margin-top: 1rem;
+}
+
+button {
+  margin: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 198, 255, 0.8);
+}
+
+input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.3rem;
+  border: 2px solid #00e5ff;
+  border-radius: 5px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.section {
+  display: none;
+  transition: opacity 0.5s;
+}
+
+.active {
+  display: block;
+}
